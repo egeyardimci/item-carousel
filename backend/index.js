@@ -4,8 +4,24 @@ import process from 'process';
 import { getAllProducts } from './services/productService.js';
 
 const app = express();
-app.use(express.json());
-app.use(cors());
+
+const allowedOrigins = [
+  'https://renart-frontend-five.vercel.app',
+  'http://localhost:5173',  // for local development
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, Postman, or server-to-server)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 const PORT = process.env.PORT || 3000;
 
