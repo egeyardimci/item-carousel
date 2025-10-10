@@ -15,11 +15,11 @@
 }
 
 .star.filled {
-  color: #ffd700;
+  color: var(--yellow-gold);
 }
 
 .star.half-filled {
-  background: linear-gradient(90deg, #ffd700 50%, #ddd 50%);
+  background: linear-gradient(90deg, var(--yellow-gold) 50%, #ddd 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +78,41 @@
 }
 
 .product-name{
+  margin: 12px 0 8px 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 14px;
+}
+
+.product-price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+
+}
+
+.color-option {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-option.selected {
+  border: 2px solid #000;
+}
+
+.color-name {
+  margin-top: 8px;
+  font-size: 12px;
+  font-family: 'Avenir', sans-serif;
 }

@@ -10,13 +10,12 @@ const ProductCard = ({ product }) => {
           src={product.images.yellow}
           alt={product.name}
           className="product-img"
-          loading="lazy"
           decoding="async"
         />
       </div>
       <div className="product-info">
         <span className="product-name">{product.name}</span>
-        <span className="product-price">{product.price} USD</span>
+        <span className="product-price">${product.price.toFixed(2)} USD</span>
         <ColorPicker />
         <Rating rating={product.popularityScore} />
       </div>
