@@ -11,3 +11,9 @@ export const COLOR_NAMES = {
   white: 'White Gold',
   rose: 'Rose Gold',
 }
+
+export const COLO_IDS = {
+  yellow: 'yellow',
+  white: 'white',
+  rose: 'rose',
+}
