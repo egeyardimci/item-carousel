@@ -21,7 +21,13 @@ export const getAllProducts = async () => {
 }
 
 export const getFilteredProductsService = async (filters) => {
-    const { minPrice, maxPrice, minPopularity, maxPopularity } = filters;
+    let { minPrice, maxPrice, minPopularity, maxPopularity } = filters;
+
+    minPrice = minPrice || 0;
+    maxPrice = maxPrice || Infinity;
+    minPopularity = minPopularity || 0;
+    maxPopularity = maxPopularity || 1;
+    
     const allProducts = await getAllProducts();
     return allProducts.filter(product => {
         return (
