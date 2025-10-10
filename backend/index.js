@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import process from 'process';
-import { getAllProducts } from './services/productService.js';
+import productsRoute from './routes/productsRoute.js';
 
 const app = express();
+app.use(express.json());
 
 const allowedOrigins = [
   'https://renart-frontend-five.vercel.app',
@@ -25,9 +26,7 @@ app.use(cors({
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/products', async (req, res) => {
-  res.send(await getAllProducts());
-});
+app.use('/products', productsRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
