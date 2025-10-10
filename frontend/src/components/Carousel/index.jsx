@@ -9,7 +9,7 @@ const Carousel = ({ products = [] }) => {
     const container = carouselRef.current;
     if (!container) return;
 
-    const scrollAmount = 340; // card width + margin
+    const scrollAmount = 280; // card width
     const newScrollLeft = container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
 
     container.scrollTo({
