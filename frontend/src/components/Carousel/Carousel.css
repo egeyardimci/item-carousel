@@ -1,15 +1,14 @@
 .carousel-container {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 50px;
 }
 
 .carousel-track {
   padding: 10px;
   display: flex;
-  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 0;
@@ -42,11 +41,8 @@
 }
 
 .carousel-arrow {
-  position: absolute;
-  top: 30%;
-  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.9);
-  width: 40px;
+  width: 67px;
   height: 40px;
   font-size: 48px;
   cursor: pointer;
@@ -55,30 +51,4 @@
   align-items: center;
   border: 0;
   justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.carousel-arrow:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
-.carousel-arrow-left {
-  left: 0;
-}
-
-.carousel-arrow-right {
-  right: 0;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .carousel-container {
-    padding: 0 30px;
-  }
-
-  .carousel-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 24px;
-  }
 }
