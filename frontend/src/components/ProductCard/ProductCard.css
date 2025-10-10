@@ -1,5 +1,9 @@
 .rating-value{
   margin-left: 5px;
+    font-family: 'Avenir', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+
 }
 
 .rating {
@@ -89,13 +93,12 @@
   font-weight: 400;
   font-size: 16px;
   color: #333;
-  margin-top: 4px;
 }
 
 .color-picker {
   display: flex;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 12px;
   align-items: center;
 
 }
@@ -108,11 +111,12 @@
 }
 
 .color-option.selected {
-  border: 2px solid #000;
+  outline: 1px solid #000;
+  outline-offset: 3px;
 }
 
 .color-name {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 12px;
   font-family: 'Avenir', sans-serif;
 }

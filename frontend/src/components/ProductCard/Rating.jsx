@@ -12,7 +12,7 @@ const Rating = ({ rating }) => {
       {Array(fullStars).fill(<span className="star filled">★</span>)}
       {halfStar && <span className="star half-filled">★</span>}
       {Array(emptyStars).fill(<span className="star empty">★</span>)}
-      <span className="rating-value">{rating}</span>
+      <span className="rating-value">{rating}/5</span>
     </div>
   );
 };
