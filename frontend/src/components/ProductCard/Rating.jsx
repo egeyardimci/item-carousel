@@ -1,5 +1,8 @@
+import { roundToNearestHalf } from "../../utils";
+
 const Rating = ({ rating }) => {
   rating = rating * 5;
+  rating = roundToNearestHalf(rating);
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 >= 0.5;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
