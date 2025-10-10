@@ -2,6 +2,8 @@
 
 A full-stack web application for browsing and filtering products. The project consists of a React frontend and an Express.js backend API.
 
+Live Demo: [Frontend on Vercel](https://renart-frontend-five.vercel.app) | [Backend on Vercel](https://renart-ten.vercel.app)
+
 ## Project Structure
 
 ```
