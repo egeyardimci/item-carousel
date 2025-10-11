@@ -23,9 +23,6 @@ const Carousel = ({ products = [] }) => {
     if (!container) return;
   };
 
-  console.log('Products in Carousel:', products);
-
-
   return (
     <div className="carousel-container">
       {(
