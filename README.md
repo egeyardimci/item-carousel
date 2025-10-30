@@ -1,4 +1,4 @@
-# Renart Case
+# Item Carousel
 
 A full-stack web application for browsing and filtering products. The project consists of a React frontend and an Express.js backend API.
 
